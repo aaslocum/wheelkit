@@ -1,5 +1,20 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    Homepage.
+    <div id="header">
+        <div class="container">
+            {% image 'bundles/app/images/logolarge.png' %}
+            <img src="{{ asset_url }}" alt="Example" />
+            {% endimage %}
+        </div>
+
+    </div>
+    <div class="bg">
+    <div class="fullpage">
+    <div class="container height1000">
+        The new WheelToolkit homepage.
+    </div>
+    </div>
+    </div>
+
 {% endblock %}
