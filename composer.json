@@ -23,8 +23,8 @@
         "incenteev/composer-parameter-handler": "~2.0",
 
       "components/jquery": "1.11.1",
-      "twitter/bootstrap": "3.*",
-        "heroku/heroku-buildpack-PHP": "*"
+      "twitter/bootstrap": "3.*"
+
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
