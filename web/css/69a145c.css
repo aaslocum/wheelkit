@@ -1,7 +1,10 @@
 .bg{
     background: url("../bundles/app/images/bg.jpg") no-repeat;
     background-size: 100%;
-    opacity: .8;
+
+}
+.bgblack{
+    background-color: #000000;
 }
 .height1000{
     min-height:1000px;
@@ -9,11 +12,26 @@
 #header{
     position: absolute;
     top:0;
+    padding-top:5px;
     height:120px;
     width:100%;
-    background-color: #f7f7f7;
 }
 .fullpage{
-    margin-top:120px;
-    padding-top: 20px;
+    padding-top: 120px;
+}
+.mainmenu > li {
+    color: white;
+    float: right;
+    margin: 20px 10px;
+    list-style: none;
+}
+
+.mainmenu > li > a{
+    color:white;
+    text-transform: uppercase;
+}
+
+
+.homepage > h3{
+    color:white;
 }

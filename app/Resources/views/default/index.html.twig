@@ -3,18 +3,29 @@
 {% block body %}
     <div id="header">
         <div class="container">
+            <div class="col-md-7">
             {% image 'bundles/app/images/logolarge.png' %}
-            <img src="{{ asset_url }}" alt="Example" />
+            <img src="{{ asset_url }}" alt="WheelToolkit" width="350" />
             {% endimage %}
+            </div>
+            <div class="col-md-5">
+                <ul class="mainmenu">
+                    <li><a href="#">Client Login</a></li>
+                    <li><a href="#">Get a Demo</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
         </div>
 
     </div>
-    <div class="bg">
-    <div class="fullpage">
-    <div class="container height1000">
-        The new WheelToolkit homepage.
-    </div>
-    </div>
+    <div class="bgblack">
+        <div class="bg">
+            <div class="fullpage">
+                <div class="container white height1000 homepage">
+                    <h3></h3>
+                 </div>
+            </div>
+        </div>
     </div>
 
 {% endblock %}
