@@ -1,0 +1,3 @@
+s2_module_homepage:
+    path:     /module/{name}
+    defaults: { _controller: S2ModuleBundle:Default:index }
