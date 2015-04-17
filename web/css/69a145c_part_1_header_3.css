@@ -5,10 +5,10 @@
     padding-top:5px;
     height:80px;
     width:100%;
-    background: -webkit-linear-gradient(top,rgba(255,255,255,0),rgba(00,0,0,.7)); /*Safari 5.1-6*/
-    background: -o-linear-gradient(bottom,rgba(255,255,255,0),rgba(0,0,0,.7)); /*Opera 11.1-12*/
-    background: -moz-linear-gradient(top,rgba(255,255,255,0),rgba(0,0,0,.7)); /*Fx 3.6-15*/
-    background: linear-gradient(to top, rgba(255,255,255,0), rgba(0,0,0,.7)); /*Standard*/
+    background: -webkit-linear-gradient(top,rgba(255,255,255,0),rgba(50,0,0,1)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(bottom,rgba(255,255,255,0),rgba(0,255,0,1)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(top,rgba(255,255,255,0),rgba(255,0,0,1)); /*Fx 3.6-15*/
+    background: linear-gradient(to top, rgba(255,255,255,0), rgba(0,0,0,.6)); /*Standard*/
 
 }
 .fullpage{

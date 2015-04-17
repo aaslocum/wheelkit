@@ -3,15 +3,15 @@
 {% block body %}
     <div id="header">
         <div class="container">
-            <div class="col-md-7">
+            <div class="logo col-md-7 col-sm-5 col-xs-4">
             {% image 'bundles/app/images/logolarge.png' %}
-            <img src="{{ asset_url }}" alt="WheelToolkit" width="350" />
+            <img src="{{ asset_url }}" alt="WheelToolkit" />
             {% endimage %}
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 col-sm-7 col-xs-8">
                 <ul class="mainmenu">
-                    <li><a href="#">Client Login</a></li>
-                    <li><a href="#">Get a Demo</a></li>
+                    <li><a href="#"><span class="long-name">Client</span> Login</a></li>
+                    <li><a href="#"><span class="long-name">Get a</span> Demo</a></li>
                     <li><a href="#">About</a></li>
                 </ul>
             </div>
@@ -22,10 +22,12 @@
         <div class="bg">
             <div class="fullpage">
                 <div class="container white height1000 homepage">
-                    <h3></h3>
+
+                    {% block modules %}
+                    {% endblock %}
+
                  </div>
             </div>
         </div>
     </div>
-
 {% endblock %}

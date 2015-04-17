@@ -24,6 +24,7 @@ public function init()
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
             new AppBundle\AppBundle(),
+            new S2\ModuleBundle\S2ModuleBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

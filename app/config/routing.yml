@@ -1,3 +1,7 @@
+s2_module:
+    resource: "@S2ModuleBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: @AppBundle/Controller/
     type:     annotation
