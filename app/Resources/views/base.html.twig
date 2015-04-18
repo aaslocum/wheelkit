@@ -17,7 +17,7 @@
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}
-            {% javascripts '@jquery' '@bootstrap_js' %}
+            {% javascripts '@jquery' '@bootstrap_js' 'bundles/s2module/js/*.js'%}
             <script type="text/javascript" src="{{ asset_url }}"></script>
             {% endjavascripts %}
         {% endblock %}

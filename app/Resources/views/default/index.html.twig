@@ -4,9 +4,9 @@
     <div id="header">
         <div class="container">
             <div class="logo col-md-7 col-sm-5 col-xs-4">
-            {% image 'bundles/app/images/logolarge.png' %}
+            <a href="/">{% image 'bundles/app/images/logolarge.png' %}
             <img src="{{ asset_url }}" alt="WheelToolkit" />
-            {% endimage %}
+            {% endimage %}</a>
             </div>
             <div class="col-md-5 col-sm-7 col-xs-8">
                 <ul class="mainmenu">
@@ -21,12 +21,14 @@
     <div class="bgblack">
         <div class="bg">
             <div class="fullpage">
-                <div class="container white height1000 homepage">
-
+                <div class="container modules">
                     {% block modules %}
                     {% endblock %}
-
                  </div>
+                <div class="container homepage">
+                    {% block homepage %}
+                    {% endblock %}
+                </div>
             </div>
         </div>
     </div>

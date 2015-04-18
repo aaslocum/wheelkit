@@ -29,7 +29,7 @@
 .logo {
     position: relative;
 }
-.logo > img {
+.logo > a > img {
     width: 50%
 }
 @media (max-width : 1200px) {

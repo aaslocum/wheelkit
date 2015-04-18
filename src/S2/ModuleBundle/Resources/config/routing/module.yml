@@ -1,0 +1,30 @@
+module:
+    path:     /
+    defaults: { _controller: "S2ModuleBundle:Module:index" }
+
+module_show:
+    path:     /{id}/show
+    defaults: { _controller: "S2ModuleBundle:Module:show" }
+
+module_new:
+    path:     /new
+    defaults: { _controller: "S2ModuleBundle:Module:new" }
+
+module_create:
+    path:     /create
+    defaults: { _controller: "S2ModuleBundle:Module:create" }
+    methods:  POST
+
+module_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "S2ModuleBundle:Module:edit" }
+
+module_update:
+    path:     /{id}/update
+    defaults: { _controller: "S2ModuleBundle:Module:update" }
+    methods:  [POST, PUT]
+
+module_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "S2ModuleBundle:Module:delete" }
+    methods:  [POST, DELETE]

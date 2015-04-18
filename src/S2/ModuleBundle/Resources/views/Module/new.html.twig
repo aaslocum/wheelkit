@@ -1,0 +1,32 @@
+{% extends '@S2Module/Default/index.html.twig' %}
+
+{% block modules -%}
+
+    <h3>Create New Module</h3>
+
+    <div class="video-content general-content container">
+        <a href="{{ path('module') }}">
+            Back to the list
+        </a>
+        {{ form_start(form) }}
+        <div class="col-md-4 col-sm-4 col-xs-5">
+            <ul class="module-edit-list module-edit-list-label">
+                <li><strong>{{ form_label(form.name) }}: </strong></li>
+                <li><strong>{{ form_label(form.youtubeId) }}: </strong></li>
+                <li><strong>{{ form_label(form.description) }}: </strong></li>
+                <li style="margin:0"><strong>Video Preview:</strong></li>
+                <li id="youtube-preview"></li>
+            </ul>
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-7">
+            <ul class="module-edit-list">
+                <li>{{ form_widget(form.name) }}{{ form_errors(form.name) }}</li>
+                <li>{{ form_widget(form.youtubeId) }}{{ form_errors(form.youtubeId) }}</li>
+                <li>{{ form_widget(form.description) }}{{ form_errors(form.description) }}</li>
+                <li> {{ form_end(form) }}</li>
+            </ul>
+        </div>
+
+
+    </div>
+{% endblock %}

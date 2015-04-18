@@ -1,3 +1,7 @@
+s2_module_module:
+    resource: "@S2ModuleBundle/Resources/config/routing/module.yml"
+    prefix:   /module
+
 s2_module_homepage:
     path:     /module/{name}
     defaults: { _controller: S2ModuleBundle:Default:index }

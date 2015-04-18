@@ -1,0 +1,35 @@
+{% extends ":default:index.html.twig" %}
+
+{% block modules -%}
+
+    <h3>Module edit</h3>
+
+    <div class="video-content general-content container">
+        <a href="{{ path('module') }}">
+            Back to the list
+        </a>
+        {{ form_start(edit_form) }}
+        <div class="col-md-4 col-sm-4 col-xs-5">
+            <ul class="module-edit-list module-edit-list-label">
+                <li><strong>{{ form_label(edit_form.name) }}: </strong></li>
+                <li><strong>{{ form_label(edit_form.youtubeId) }}: </strong></li>
+                <li><strong>{{ form_label(edit_form.description) }}: </strong></li>
+                <li style="margin:0"><strong>Video Preview:</strong></li>
+                <li id="youtube-preview"></li>
+            </ul>
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-7">
+            <ul class="module-edit-list">
+                <li>{{ form_widget(edit_form.name) }}{{ form_errors(edit_form.name) }}</li>
+                <li>{{ form_widget(edit_form.youtubeId) }}{{ form_errors(edit_form.youtubeId) }}</li>
+                <li>{{ form_widget(edit_form.description) }}{{ form_errors(edit_form.description) }}</li>
+                <li class="module-submit-li"> {{ form_end(edit_form) }}</li>
+                {{ form_end(edit_form) }}
+                <li><div class="module-delete-btn">{{ form(delete_form) }}</div></li>
+            </ul>
+
+        </div>
+
+
+    </div>
+{% endblock %}
