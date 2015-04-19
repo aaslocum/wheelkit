@@ -22,8 +22,8 @@ public function init()
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
-            new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
+            new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle(),
+            new Sensio\Bundle\DistributionBundle\SensioDistributionBundle(),
             new AppBundle\AppBundle(),
             new S2\ModuleBundle\S2ModuleBundle(),
         );
