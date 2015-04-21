@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div id="header">
+    <div id="header" data-0="background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)) repeat scroll 0% 0% transparent;" data-350="background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)) repeat scroll 0% 0% transparent;" data-400="background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)) repeat scroll 0% 0% transparent;">
         <div class="container">
             <div class="logo col-md-7 col-sm-5 col-xs-4">
             <a href="/">{% image 'bundles/app/images/logolarge.png' %}
@@ -10,14 +10,19 @@
             </div>
             <div class="col-md-5 col-sm-7 col-xs-8">
                 <ul class="mainmenu">
-                    <li><a href="#"><span class="long-name">Client</span> Login</a></li>
-                    <li><a href="#"><span class="long-name">Get a</span> Demo</a></li>
-                    <li><a href="#">About</a></li>
+                    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                        <li><a class="link" href="{{ path('logout') }}">Logout</a></li>
+                    {% endif %}
+                    <li><a href="http://www.wheeltoolkit.com"><span class="long-name">Client</span> Login</a></li>
+                    <li><a href="/module">Demo<span class="long-name"> Videos</span></a></li>
+                    <li><a href="/">About</a></li>
+
                 </ul>
             </div>
         </div>
 
     </div>
+    {% block homepage %}
     <div class="bgblack">
         <div class="bg">
             <div class="fullpage">
@@ -25,11 +30,18 @@
                     {% block modules %}
                     {% endblock %}
                  </div>
-                <div class="container homepage">
-                    {% block homepage %}
+                <div class="container infopage">
+                    {% block infopage %}
+                    {% endblock %}
+                </div>
+
+                <div class="container login">
+                    {% block login %}
                     {% endblock %}
                 </div>
             </div>
+        </div>
+       {% endblock %}
         </div>
     </div>
 {% endblock %}

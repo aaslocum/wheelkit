@@ -1,0 +1,29 @@
+{% extends 'default/index.html.twig' %}
+
+{% block modules -%}
+    <h3>Create New Info Page</h3>
+
+    <div class="video-content general-content container">
+        <a href="{{ path('infopage') }}">
+            Back to the list
+        </a>
+        {{ form_start(form) }}
+        <div class="col-md-4 col-sm-4 col-xs-5">
+            <ul class="module-edit-list module-edit-list-label">
+                <li><strong>{{ form_label(form.title) }}: </strong></li>
+                <li><strong>{{ form_label(form.image) }}: </strong></li>
+                <li><strong>{{ form_label(form.content) }}: </strong></li>
+            </ul>
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-7">
+            <ul class="module-edit-list">
+                <li>{{ form_widget(form.title) }}{{ form_errors(form.title) }}</li>
+                <li>{{ form_widget(form.image) }}{{ form_errors(form.image) }}</li>
+                <li>{{ form_widget(form.content) }}{{ form_errors(form.content) }}</li>
+                <li> {{ form_end(form) }}</li>
+            </ul>
+        </div>
+
+
+    </div>
+{% endblock %}

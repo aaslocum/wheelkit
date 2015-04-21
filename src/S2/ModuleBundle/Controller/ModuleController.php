@@ -7,6 +7,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use S2\ModuleBundle\Entity\Module;
 use S2\ModuleBundle\Form\ModuleType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 /**
  * Module controller.
@@ -16,6 +18,8 @@ class ModuleController extends Controller
 {
 
     /**
+     *
+     * @Template()
      * Lists all Module entities.
      *
      */
@@ -25,9 +29,9 @@ class ModuleController extends Controller
 
         $entities = $em->getRepository('S2ModuleBundle:Module')->findAll();
 
-        return $this->render('S2ModuleBundle:Module:index.html.twig', array(
+        return array(
             'entities' => $entities,
-        ));
+        );
     }
     /**
      * Creates a new Module entity.

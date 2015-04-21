@@ -24,6 +24,10 @@ public function init()
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
             new S2\ModuleBundle\S2ModuleBundle(),
+            new S2\PageBundle\S2PageBundle(),
+            new S2\UserBundle\S2UserBundle(),
+            new \Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

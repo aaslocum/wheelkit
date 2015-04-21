@@ -1,0 +1,48 @@
+{% extends ':default:index.html.twig' %}
+ {% block homepage %}
+     <div class="bgwide">
+         <div class="logobike" data-0="margin-left:100px" data-600="margin-left:-2000px">
+         {% image 'bundles/app/images/logobike.png' %}
+         <img src="{{ asset_url }}" alt="WheelToolkit" />
+         {% endimage %}
+         </div>
+     </div>
+
+     <div class="pagesmenu" data-399="position:relative; top:0;" data-400="position:fixed; top:80px;">
+         <div class="container">
+        <ul>
+         {% for page in pages %}
+            <li><a href="#info-page-{{ page.id }}">{{ page.title }}</a></li>
+        {% endfor %}
+        </ul>
+         </div>
+     </div>
+     <div class="homepage-info container">
+         <h1>A set of analytics and tools that help owners and managers make good decisions that are data-driven and based in reality.</h1>
+        {% for page in pages %}
+            <div class= "info-page-header-holder" id="info-page-{{ page.id }}"></div>
+             <div class="info-page">
+               <h3>{{ page.title }}</h3>
+               <div class="container">
+               {% if page.id is divisible by(2) %}
+                    <div class = "col-md-8">
+                    <img src="{{ page.image }}" alt="WheelToolkit" />
+                   </div>
+                   <div class="info-content col-md-4">
+                    {{ page.content | raw}}
+                   </div>
+                {% else %}
+                    <div class=" info-content col-md-4">
+                        {{ page.content | raw}}
+                     </div>
+             <div class = "col-md-8">
+                 <img src="{{ page.image }}" alt="WheelToolkit" />
+             </div>
+         {% endif %}
+             </div>
+     </div>
+     {% endfor %}
+     </div>
+
+
+{% endblock %}

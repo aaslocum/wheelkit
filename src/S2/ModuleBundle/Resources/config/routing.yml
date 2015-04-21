@@ -3,5 +3,9 @@ s2_module_module:
     prefix:   /module
 
 s2_module_homepage:
-    path:     /module/{name}
+    path:     /demo-video/{name}
     defaults: { _controller: S2ModuleBundle:Default:index }
+
+s2_module_annotations:
+  resource: "@S2ModuleBundle/Controller"
+  type: annotation

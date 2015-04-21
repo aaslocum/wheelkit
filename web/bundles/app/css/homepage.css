@@ -1,25 +1,92 @@
+body{
+    background-color: #E5E5E0;
+}
 ul{
     list-style: none;
 }
-.modules > h3{
-    text-align:center;
-    margin-top:30px;
-    font-family: 'Sanchez', serif;
-    font-size:36px;
+.info-page-header-holder{
+    height:160px;
 }
-.modules{
-    color:#111111;
-    background:rgba(255,255,255,.9);
-    border-radius:4px 4px 0 0;
+.homepage-info h1{
+    margin:40px 0;
+    text-align:center;
+    font-size: 30px;
+    font-family: "Lucida Grande",Tahoma,Verdana,Arial,sans-serif;
+}
+.info-content{
+    text-align: left;
+    margin-top:25px;
+}
+.info-page{
+    margin-top:20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    border: 1px solid #cbcbcb;
+    text-align: center;
+}
+.info-page img{
+    margin:30px 0;
+    width:95%;
+}
+.info-page h3{
+    display:inline-block;
+    margin-top:30px;
+}
+.info-page ul{
+    padding:0;
+    list-style: square;
+}
+.info-page li{
+    padding:5px 0;
+}
+.logobike{
+    margin:0px 0 0 120px;
+    padding-top:150px;
+}
+.logobike > img{
+    width:1500px;
+}
+.pagesmenu{
+    background:#AA3333;
+    width:100%;
+    z-index: 10;
+}
+.pagesmenu a {
+    color: white;
+    font: 1.1em/1.6 "Lucida Grande",Tahoma,Verdana,Arial,sans-serif;
+}
+.pagesmenu ul{
+   margin:0;
+
+}
+.pagesmenu li{
+    display:inline-block;
+    padding:10px 20px;
 }
 @media (max-width : 1200px) {
-
+    .logobike{
+        margin:0px 0 0 50px;
+        padding-top:100px;
+    }
+    .logobike > img{
+        width:1300px;
+    }
 }
 @media (max-width : 991px) {
-
+    .logobike{
+        margin:0px 0 0 50px;
+        padding-top:45px;
+    }
+    .logobike > img{
+        width:1100px;
+    }
 }
 @media (max-width: 768px) {
-    .modules{
-        border-radius:0;
+    .logobike{
+        margin:0px 0 0 30px;
+        padding-top:15px;
+    }
+    .logobike > img{
+        width:800px;
     }
 }

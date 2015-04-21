@@ -12,7 +12,10 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('default/index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $repo = $em->getRepository('S2PageBundle:InfoPage');
+        $pages = $repo->findAll();
+        return $this->render('default/homepage.html.twig', array('pages' =>$pages ));
     }
         /**
      * @Route("/hello/{name}", name="hello")
@@ -21,4 +24,5 @@ class DefaultController extends Controller
     {
         return $this->render('default/hello.html.twig',array('name'=>$name));
     }
+
 }

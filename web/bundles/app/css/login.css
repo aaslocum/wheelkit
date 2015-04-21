@@ -1,0 +1,40 @@
+.login > h3{
+    text-align:center;
+    font-family: 'Sanchez', serif;
+    font-size:24px;
+}
+.login{
+    color:#111111;
+    background:rgba(255,255,255,.9);
+    border-radius:4px;
+    width: 350px;
+    text-align:center;
+}
+.login li{
+    padding:10px 0;
+    text-align: center;
+}
+.login label{
+    padding:0 10px 0 0;
+}
+.login button{
+    width:150px;
+    display: inline-block;
+    background: #111111;
+    border-radius:5px;
+    border:0px;
+    color:white;
+    box-shadow: 1px 1px 3px #444444;
+    margin:0 auto;
+}
+.login button:hover{
+    background: #444444;
+    box-shadow: 1px 1px 4px #444444;
+}
+.login .login-error{
+    background-color: #ce8483;
+    padding:10px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,.2);
+    display: inline-block;
+}

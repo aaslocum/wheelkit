@@ -1,0 +1,30 @@
+infopage:
+    path:     /
+    defaults: { _controller: "S2PageBundle:InfoPage:index" }
+
+infopage_show:
+    path:     /{id}/show
+    defaults: { _controller: "S2PageBundle:InfoPage:show" }
+
+infopage_new:
+    path:     /new
+    defaults: { _controller: "S2PageBundle:InfoPage:new" }
+
+infopage_create:
+    path:     /create
+    defaults: { _controller: "S2PageBundle:InfoPage:create" }
+    methods:  POST
+
+infopage_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "S2PageBundle:InfoPage:edit" }
+
+infopage_update:
+    path:     /{id}/update
+    defaults: { _controller: "S2PageBundle:InfoPage:update" }
+    methods:  [POST, PUT]
+
+infopage_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "S2PageBundle:InfoPage:delete" }
+    methods:  [POST, DELETE]

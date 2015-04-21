@@ -1,7 +1,13 @@
 s2_module:
     resource: "@S2ModuleBundle/Resources/config/routing.yml"
     prefix:   /
+s2_page:
+    resource: "@S2PageBundle/Resources/config/routing.yml"
+    prefix:   /
 
+s2_user:
+    resource: "@S2UserBundle/Controller/SecurityController.php"
+    type:     annotation
 app:
     resource: @AppBundle/Controller/
     type:     annotation

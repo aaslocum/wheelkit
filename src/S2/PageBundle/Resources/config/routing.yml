@@ -1,0 +1,11 @@
+s2_page_infopage:
+    resource: "@S2PageBundle/Resources/config/routing/infopage.yml"
+    prefix:   /infopage
+
+s2_page_homepage:
+    path:     /page/{title}
+    defaults: { _controller: S2PageBundle:Default:index }
+
+s2_module_annotations:
+  resource: "@S2PageBundle/Controller"
+  type: annotation

@@ -1,0 +1,10 @@
+{% extends ':default:index.html.twig' %}
+ {% block infopage %}
+     <h3><span class="text-capitalize"> {{ page.title }}</span></h3>
+     <div class="video-content">
+         <div class="general-content video-description">
+             <img src="{{ page.image }}" alt="WheelToolkit" />
+             <p>{{ page.content }}</p>
+         </div>
+     </div>
+ {% endblock %}

@@ -1,0 +1,12 @@
+.infopage > h3{
+    text-align:center;
+    margin-top:30px;
+    font-family: 'Sanchez', serif;
+    font-size:36px;
+}
+#s2_pagebundle_infopage_title{
+    width: 100%;
+}
+.infopage .general-content{
+    background-color: white;
+}

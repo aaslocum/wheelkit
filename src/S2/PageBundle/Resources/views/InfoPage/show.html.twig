@@ -1,0 +1,41 @@
+{% extends '@S2Page/Default/index.html.twig' %}
+
+{% block infopage -%}
+    <h3>Info Page</h3>
+    <div class="video-content general-content container">
+        <table class="record_properties table table-bordered table-striped table-hover table-condensed">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td><a href="{{ path('infopage') }}{{ entity.title | replace(" ","-") }}">{{ entity.title }}</a></td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ entity.image }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>{{ entity.content }}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <ul class="record_actions">
+            <li>
+                <a href="{{ path('infopage') }}">
+                    Back to the list
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('infopage_edit', { 'id': entity.id }) }}">
+                    Edit
+                </a>
+            </li>
+            <li>{{ form(delete_form) }}</li>
+        </ul>
+    </div>
+{% endblock %}
