@@ -7,7 +7,6 @@
          {% endimage %}
          </div>
      </div>
-
      <div class="pagesmenu" data-399="position:relative; top:0;" data-400="position:fixed; top:80px;">
          <div class="container">
         <ul>
@@ -25,17 +24,17 @@
                <h3>{{ page.title }}</h3>
                <div class="container">
                {% if page.id is divisible by(2) %}
-                    <div class = "col-md-8">
+                    <div class = "info-content col-md-6">
                     <img src="{{ page.image }}" alt="WheelToolkit" />
                    </div>
-                   <div class="info-content col-md-4">
+                   <div class="info-content col-md-5">
                     {{ page.content | raw}}
                    </div>
                 {% else %}
-                    <div class=" info-content col-md-4">
+                    <div class="info-content col-md-5">
                         {{ page.content | raw}}
                      </div>
-             <div class = "col-md-8">
+             <div class = "info-content col-md-6">
                  <img src="{{ page.image }}" alt="WheelToolkit" />
              </div>
          {% endif %}

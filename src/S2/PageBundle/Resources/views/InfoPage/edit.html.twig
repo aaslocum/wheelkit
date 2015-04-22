@@ -1,16 +1,34 @@
-{% extends 'S2PageBundle:Default:index.html.twig' %}
+{% extends ":default:index.html.twig" %}
 
-{% block infopage -%}
-    <h1>InfoPage edit</h1>
+{% block modules -%}
 
-    {{ form(edit_form) }}
+    <h3>Info Page Edit</h3>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('infopage') }}">
+    <div class="video-content general-content container">
+        <a href="{{ path('module') }}">
             Back to the list
         </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+        {{ form_start(edit_form) }}
+        <div class="col-md-4 col-sm-4 col-xs-5">
+            <ul class="module-edit-list module-edit-list-label">
+                <li><strong>{{ form_label(edit_form.title) }}: </strong></li>
+                <li><strong>{{ form_label(edit_form.image) }}: </strong></li>
+                <li><strong>{{ form_label(edit_form.content) }}: </strong></li>
+            </ul>
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-7">
+            <ul class="module-edit-list">
+                <li>{{ form_widget(edit_form.title) }}{{ form_errors(edit_form.title) }}</li>
+                <li>{{ form_widget(edit_form.image) }}{{ form_errors(edit_form.image) }}</li>
+                <li>{{ form_widget(edit_form.content) }}{{ form_errors(edit_form.content) }}</li>
+                <li class="module-submit-li"> {{ form_end(edit_form) }}</li>
+                {{ form_end(edit_form) }}
+                <li><div class="module-delete-btn">{{ form(delete_form) }}</div></li>
+            </ul>
+
+        </div>
+
+
+    </div>
 {% endblock %}
+
